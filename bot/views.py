@@ -9,7 +9,9 @@ from .bot_handler import SimpleBot  # Assuming SimpleBot is in bot_handler.py
 import asyncio
 import json
 
-bot_settings = BotFrameworkAdapterSettings("MICROSOFT_APP_ID", "MICROSOFT_APP_PASSWORD")
+bot_settings = BotFrameworkAdapterSettings(
+    "settings.MICROSOFT_APP_ID", "settings.MICROSOFT_APP_PASSWORD"
+)
 adapter = BotFrameworkAdapter(bot_settings)
 bot = SimpleBot()
 
